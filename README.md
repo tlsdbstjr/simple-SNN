@@ -3,4 +3,4 @@ this repository handles about simple SNN neuron, forward feeding, backward feedi
 
 the source code is edited by Microsoft Visual Studio 2022 Community.
 
-this version is initial state.
+forward logic updated.
