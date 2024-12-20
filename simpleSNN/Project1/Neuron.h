@@ -7,7 +7,7 @@ class Neuron
 {
 private:
 	t_membrane membrane;
-	unsigned char decayRate;
+	unsigned char decayRate;	// n, membrane -= membrane * 2^-n
 
 public:
 	Neuron();

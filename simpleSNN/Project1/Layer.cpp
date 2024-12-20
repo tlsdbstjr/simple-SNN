@@ -1,10 +1,17 @@
 #include "Layer.h"
 
-Layer::Layer(unsigned int _cellCnt)
+Layer::Layer(unsigned int _cellCnt) : cellCnt(_cellCnt)
 {
-	cellCnt = _cellCnt;
 	cell = new Neuron[cellCnt];
 	weight = new t_membrane[cellCnt];
+}
+
+Layer::Layer(const Layer& obj) : cellCnt(obj.cellCnt)
+{
+	cell = new Neuron[cellCnt];
+	weight = new t_membrane[cellCnt];
+	std::copy(obj.cell, obj.cell + cellCnt, cell);
+	std::copy(obj.weight, obj.weight + cellCnt, weight);
 }
 
 Layer::~Layer()

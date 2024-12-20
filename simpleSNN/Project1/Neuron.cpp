@@ -14,7 +14,7 @@ bool Neuron::Update(t_membrane input)
 {
 	membrane -= membrane >> decayRate;
 	t_membrane next = membrane + input;
-	bool out = (membrane ^ next) < 0;
+	bool out = next < 0 && membrane > 0;
 	membrane = next;
 	return out;
 }

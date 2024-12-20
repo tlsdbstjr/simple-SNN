@@ -1,7 +1,8 @@
 #ifndef __LAYER__
 #define __LAYER__
 
-#include<vector>
+#include <algorithm>
+#include <vector>
 
 #include "dataTypes.h"
 #include "Neuron.h"
@@ -16,6 +17,7 @@ private:
 
 public:
 	Layer(unsigned int _cellCnt);
+	Layer(const Layer& obj);
 	~Layer();
 
 	Neurotransmitter forward(Neurotransmitter input);
